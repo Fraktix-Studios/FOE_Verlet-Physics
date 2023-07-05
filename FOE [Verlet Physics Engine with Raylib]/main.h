@@ -18,6 +18,7 @@ namespace foe
 	// Solver Settings
 	constexpr int subSteps = 8;
 	float stepDeltaTime = 0;
+	float stepDeltaTimeTarget = 0;
 	int frameRate = 0;
 
 	// Object Settings

@@ -19,6 +19,7 @@ constexpr int spatialSplit_rowHeight = windowHeight / spatialSplitRows;
 
 inline float getFrameTime() {
 	return stepDeltaTime / static_cast<float>(subSteps);
+	// return GetFrameTime() / static_cast<float>(subSteps); 
 }
 
 inline void SpatialSplitAddObject(VerletObject& object) {
@@ -95,19 +96,19 @@ inline void SpatialSplitUpdate() {
 				object.Accelerate(gravity);
 				if (object.current_position.y >= windowHeight - object.objectRadius - spatialSplit_rowHeight) {
 					object.current_position.y = windowHeight - object.objectRadius - spatialSplit_rowHeight;
-					object.SetVelocity(Vec2{ object.velocity.x, -object.velocity.y * objectBounciness }, getFrameTime());
+					// object.SetVelocity(Vec2{ object.velocity.x, -object.velocity.y * objectBounciness }, getFrameTime());
 				}
 				if (object.current_position.y <= 0 + object.objectRadius + spatialSplit_rowHeight) {
 					object.current_position.y = 0 + object.objectRadius + spatialSplit_rowHeight;
-					object.SetVelocity(Vec2{ object.velocity.x, -object.velocity.y * objectBounciness }, getFrameTime());
+					// object.SetVelocity(Vec2{ object.velocity.x, -object.velocity.y * objectBounciness }, getFrameTime());
 				}
 				if (object.current_position.x >= windowWidth - object.objectRadius - spatialSplit_columnWidth) {
 					object.current_position.x = windowWidth - object.objectRadius - spatialSplit_columnWidth;
-					object.SetVelocity(Vec2{ -object.velocity.x * objectBounciness, object.velocity.y }, getFrameTime());
+					// object.SetVelocity(Vec2{ -object.velocity.x * objectBounciness, object.velocity.y }, getFrameTime());
 				}
 				if (object.current_position.x <= 0 + object.objectRadius + spatialSplit_columnWidth) {
 					object.current_position.x = 0 + object.objectRadius + spatialSplit_columnWidth;
-					object.SetVelocity(Vec2{ -object.velocity.x * objectBounciness, object.velocity.y }, getFrameTime());
+					// object.SetVelocity(Vec2{ -object.velocity.x * objectBounciness, object.velocity.y }, getFrameTime());
 				}
 			}
 		}
