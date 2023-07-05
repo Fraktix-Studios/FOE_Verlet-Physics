@@ -1,0 +1,9 @@
+﻿  main.cpp
+main.obj : error LNK2001: unresolved external symbol _SetTargetFPS
+main.obj : error LNK2001: unresolved external symbol _DrawCircle
+main.obj : error LNK2001: unresolved external symbol _ClearBackground
+main.obj : error LNK2001: unresolved external symbol _WindowShouldClose
+main.obj : error LNK2001: unresolved external symbol _BeginDrawing
+main.obj : error LNK2001: unresolved external symbol _InitWindow
+main.obj : error LNK2001: unresolved external symbol _EndDrawing
+C:\Users\matth_wnnepii\Documents\Visual Studio Projects\FOE [Verlet Physics Engine with Raylib]\Release\FOE [Verlet Physics Engine with Raylib].exe : fatal error LNK1120: 7 unresolved externals
